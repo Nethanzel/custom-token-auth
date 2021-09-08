@@ -17,11 +17,11 @@ const options = {
         },
         servers: [
             {
-                url: ["http://127.0.0.1/"],
+                url: "http://127.0.0.1/",
             },
         ],
     },
-    apis: ["./src/api/*.js"]
+    apis: ["./src/api/*.js"],
 };
 
 module.exports.options = options;
