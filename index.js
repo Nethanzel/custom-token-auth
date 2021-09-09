@@ -15,13 +15,11 @@ if(process.env.MODE == "development") {
     service.use(cors({ origin: "*", exposedHeaders: "*" }));
     console.log("DEV MODE");
 }
+const { options } = require("./docs.js");
+const specs = swaggerJsdoc(options);
 
 service.use("/auth", authRoutes);
 service.use("/api", apiRoutes);
-
-const { options } = require("./docs.js");
-
-const specs = swaggerJsdoc(options);
 service.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 service.listen(service.get("PORT"), () => console.log(`Server is running on port ${service.get("PORT")}`));
