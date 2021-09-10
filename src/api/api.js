@@ -8,21 +8,3 @@ router.get("/data", userToken.validateToken, (req, res) => {
 });
 
 module.exports = router;
-
-/**
- * @swagger
- * /api/data:
- *  get:
- *      parameters:
- *      - name: token
- *        in: header
- *        description: Authorization id
- *        required: true
- *        type: string
- *      description: Return some testing data, only if you pass a valid token
- *      responses:
- *          '200':
- *              description: A successful response
- *          '401':
- *              description: Invalid authentication token
- */
