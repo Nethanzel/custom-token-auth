@@ -16,6 +16,7 @@ if(process.env.MODE == "development") {
     console.log("DEV MODE");
 }
 
+service.use("/", express.static(__dirname + "/src/client"))
 service.use("/auth", authRoutes);
 service.use("/api", apiRoutes);
 

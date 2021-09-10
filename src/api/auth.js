@@ -34,7 +34,7 @@ router.post("/login", (req, res) => {
 //===============< Remove this code for your user validation >==================================================
     for(let i = 0; i < users.length; i++) {
         if(users[i].username === authUserData.username && users[i].password === authUserData.password) {
-            return res.status(200).send({authUserData, token});
+            return res.status(200).send({"username": authUserData.username, token});
         }
     }
 //===============< Remove until here >=========================================================================

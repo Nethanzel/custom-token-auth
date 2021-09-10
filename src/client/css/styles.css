@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(131, 131, 131);
+    height: 98vh;
+}
+
+#viewContainer {
+    min-width: 35%;
+    min-height: 50%;
+
+    width: 100px;
+    height: 100px;
+    box-shadow: 5px 5px 10px black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(245, 245, 245, 0.438);
+
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#viewContainer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.664);
+    object-fit: scale-down;
+    background-color: #fff;
+}
+
+#viewContainer .info h2, #viewContainer .login h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#viewContainer .info p {
+    margin: 5px;
+    padding: 0px;
+}
+
+#viewContainer .footer {
+    padding: 10px;
+    margin-top: 15px;
+}
+
+#viewContainer .login .form {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+#viewContainer .login .form button {
+    margin-top: 15px;
+    height: 30px;
+}
+
+#viewContainer .login .form div {
+    margin: 5px;
+}
+
+#viewContainer .login .form div input {
+    width: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    padding: 3px 5px;
+}
+
+#viewContainer .login .form div span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    position: absolute;
+    margin-left: -80px;
+    margin-top: 3px;
+}
+
+#viewContainer .alert {
+    min-height: 30px;
+    margin-top: 5px;
+}
+
+#alertText {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: solid 3px rgb(255, 0, 0);
+    padding: 5px 15px !important; 
+    background-color: rgba(219, 78, 78, 0.425);
+    text-align: center;
+    display: none;
+}
