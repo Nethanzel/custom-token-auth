@@ -14,8 +14,8 @@ function generateToken(authData) {
 }
 
 function revertGeneratedToken(hash) {
-    let unhashedToken = decryptWithAES(hash.token);
     try {
+        let unhashedToken = decryptWithAES(hash.token);
         return JSON.parse(unhashedToken);
     } catch (error) {
         return false;

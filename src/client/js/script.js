@@ -20,6 +20,10 @@ function validate() {
         if(res.status == 500) {
             alertText.style.display = "block";
             alertText.innerText = "Server error.";
+
+            username.innerHTML = `<strong>Username:</strong>  --`
+            loginDate.innerHTML = `<strong>Login date:</strong> --`
+            tokenDate.innerHTML = `<strong>Token expiry:</strong> --`
         }
 
         let data = await res.json();
