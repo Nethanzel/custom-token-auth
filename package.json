@@ -12,7 +12,6 @@
   "dependencies": {
     "cors": "^2.8.5",
     "crossenv": "0.0.2-security",
-    "crypto-js": "^4.1.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "swagger-jsdoc": "^6.1.0",
