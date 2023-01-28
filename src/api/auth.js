@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const userToken = require("../Auth/index.js");
 
-/* Testing users */
+/* Test users */
 let users = [
     {
         username: "User1",
@@ -21,9 +21,9 @@ let users = [
     }
 ];
 
-router.get("/validate", userToken.validateToken, (req, res) => {
-     let authUserData = req.headers;
-    let tokenData = userToken.revertGeneratedToken(authUserData);
+router.get("/validate", userToken.requestBearer, (req, res) => {
+    let authUserData = req.headers;
+    let tokenData = userToken.revertGeneratedToken(authUserData.token);
     res.status(200).send({ tokenData });
 });
 
